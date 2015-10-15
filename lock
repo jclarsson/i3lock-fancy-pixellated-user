@@ -5,7 +5,7 @@
 # i3lock-color-git
 # scrot
 xset dpms force on 
-cd /home/james/.config/i3lock-fancy-master
+cd ~/.config/i3lock-fancy-pixellated-user
  
 IMAGE=/tmp/i3lock.png
 
@@ -20,7 +20,7 @@ IMAGE=/tmp/i3lock.png
 sleep 0.3
 scrot $IMAGE
 
-uinfo=$(getent passwd james)
+uinfo=$(getent passwd $USER)
 IFS=':' read -a array <<< "$uinfo"
 
 cp /var/lib/AccountsService/icons/$USER user.png
